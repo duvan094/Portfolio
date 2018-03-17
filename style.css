@@ -84,18 +84,6 @@ header #logo>img{
   color: #F4E3BF;
 }
 
-.hero.front-page::after{
-  content: "";
-  width: 0;
-  height: 0;
-  border: transparent 22px solid;
-  border-top-color:#231D17;
-  bottom:0;
-  left:50%;
-  transform: translate(-50%,100%);
-  position: absolute;
-}
-
 .hero.front-page .title{
   font-size: 72px;
   font-weight: 200;
@@ -139,7 +127,7 @@ header #logo>img{
 
 article{
   background: #F9EFDF;
-  padding:66px 0 0 0;
+  padding:0;
 }
 
 article .wrapper{
@@ -148,7 +136,7 @@ article .wrapper{
   align-items: center;
   min-height: 420px;
   flex-direction: column;
-  padding:0 22px;
+  padding:66px 22px;
 }
 
 
@@ -170,7 +158,6 @@ article .text-container{
   width:100%;
   padding:0;
   margin:0;
-  margin-top: 44px;
 }
 
 #postgrid li{
@@ -252,6 +239,10 @@ footer .links>a>img{
 }
 
 @media(max-width:720px){
+  footer *{
+    text-align: center;
+  }
+
   footer .footer-bottom{
     flex-direction: column-reverse;
   }
