@@ -1,5 +1,0 @@
-<?php
-
-/*Custom post type*/
-
- ?>
