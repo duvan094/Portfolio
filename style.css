@@ -175,8 +175,14 @@ article .text-container{
   top:50%;
   transform: translate(-50%,-50%);
   display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   text-align: center;
   margin-top: 0;
+}
+
+#postgrid li:hover .text-container{
+  opacity:1;
 }
 
 #postgrid li h4{
@@ -185,7 +191,6 @@ article .text-container{
 }
 
 #postgrid li p{
-  opacity:0.8;
   color:#FFF
 }
 
