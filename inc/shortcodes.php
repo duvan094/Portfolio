@@ -2,7 +2,7 @@
 
   add_shortcode('gallery','my_function');
 
-  function my_function($atts,$content){
+  function my_function($atts){
     $markup = "<div class='slider-cont'>";
     $markup .= "<div id='slider'>";
     $images = explode(",",$atts['ids']);

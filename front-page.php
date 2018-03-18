@@ -2,8 +2,8 @@
 
 <div class="front-page hero">
   <div class="hero-text">
-    <div class="console">HELLO MY NAME IS</div>
-    <h2 class="title">Jacob</h2>
+    <h1 class="title">Jacob</h1>
+    <h2>Graphic designer & Web developer</h2>
   </div>
 </div>
 <?php

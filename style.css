@@ -123,9 +123,13 @@ header #logo>img{
 }
 
 .hero.front-page .title{
-  font-size: 72px;
+  font-size: 6em;
+  font-weight: 700;
+}
+
+.hero.front-page h2{
+  font-size: 1.2em;
   font-weight: 200;
-  font-style: italic;
 }
 
 .console{
