@@ -26,7 +26,5 @@
   </head>
   <body>
     <header>
-      <div class="wrapper">
         <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
-      </div>
     </header>

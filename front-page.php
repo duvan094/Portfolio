@@ -2,14 +2,17 @@
 
 <div class="front-page hero">
   <div class="hero-text">
-    <h1 class="title">Jacob</h1>
+    <h1 class="title">Jacob.</h1>
     <h2>Graphic designer & Web developer</h2>
   </div>
+</div>
+<div class="featured-title">
+  <h3>Featured Projects</h3>
 </div>
 <?php
 $args = array(
     'post_type'     => 'project',
-    'posts_per_page' => 8
+    'posts_per_page' => 6
 );
 
 $my_query = new WP_Query($args);
@@ -34,7 +37,6 @@ endif;
 
 ?>
 <article>
-
   <div class="wrapper">
     <img class="article-img" src="<?php bloginfo('template_url'); ?>/img/cup.svg" alt="cup">
     <div class="text-container">
