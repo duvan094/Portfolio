@@ -122,11 +122,11 @@ header #logo>img{
 
 .slider-cont{
   position: relative;
-  height:700px;
+  padding-top:100%;
   width:100%;
   overflow: hidden;
   margin-bottom: 66px;
-  background: #CCC;
+  background: rgba(0,0,0,0.8);
 }
 
 .slider-cont img{
@@ -156,9 +156,35 @@ header #logo>img{
 .slider-cont button{
     position: absolute;
     z-index: 10;
-    top:50%;
+    bottom:0;
     padding:11px;
     cursor: pointer;
+    background: #000;
+    color:#FFF;
+    outline: none;
+    border:none;
+    text-align: center;
+}
+.slider-cont button#prev::before{
+  content: "";
+  display: block;
+  width:0;
+  height:0;
+  border: solid 5px transparent;
+  border-right-color: #fff;
+  float:left;
+  transform: translate(-50%,50%);
+}
+
+.slider-cont button#next::before{
+  content: "";
+  display: block;
+  width:0;
+  height:0;
+  border: solid 5px transparent;
+  border-left-color: #fff;
+  float:right;
+  transform: translate(50%,50%);
 }
 
 .slider-cont button#next{
@@ -176,10 +202,12 @@ article .wrapper{
   align-items: center;
   min-height: 420px;
   flex-direction: column;
-  padding:66px 0px;
+  padding:66px 22px;
 }
 
-
+article .wrapper.project{
+  padding:66px 0px;
+}
 
 article .article-img{
   width: 100%;
@@ -375,6 +403,27 @@ footer .links>a>img{
   .slider-cont img{
     width:auto;
     height:100%;
+  }
+  .slider-cont{
+    padding-top:0;
+    height: 700px;
+    width:100%;
+  }
+
+  .slider-cont button{
+    bottom: 50%;
+  }
+
+  .slider-cont button#next{
+    transform: translate(100%,50%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider-cont button#prev{
+    transform: translate(-100%,50%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider-cont:hover button#next, .slider-cont:hover button#prev{
+    transform: translate(0,50%);
   }
 
   #postgrid{

@@ -11,7 +11,7 @@
   <?php
   $args = array(
       'post_type'     => 'project',
-      'post_per_page' => -1,
+      'posts_per_page' => 8
   );
 
   $my_query = new WP_Query($args);
