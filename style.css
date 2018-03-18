@@ -427,11 +427,10 @@ footer .links>a{
   margin:0 11px;
 }
 
-
 footer .links>a>img{
   display: block;
   width: 44px;
-  height:auto
+  height:auto;
 }
 
 footer .copyright{
