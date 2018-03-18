@@ -3,4 +3,5 @@
   require('inc/reg_taxonomies.php');
   require('inc/reg_media.php');
   require('inc/reg_hooks.php');
+  require('inc/shortcodes.php');
  ?>
