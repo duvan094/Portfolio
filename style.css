@@ -276,7 +276,7 @@ article{
 
 article .wrapper{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   min-height: 420px;
   flex-direction: column;
