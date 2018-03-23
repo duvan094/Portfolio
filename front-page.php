@@ -8,7 +8,7 @@
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow.svg" alt="arrow">
 </div>
 <div class="featured-title">
-  <h3>Featured Projects</h3>
+  <h3>Latest Projects</h3>
 </div>
 <?php
 $args = array(

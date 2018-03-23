@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jacob Duvander</title>
+    <title>Jacob Duvander | Portfolio</title>
     <meta charset="utf-8">
-    <meta name="description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out his latest projects.">
+    <meta name="description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out my latest projects.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="Jacob Duvander - Portfolio">
-    <meta property="og:description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out his latest projects.">
+    <meta property="og:description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out my latest projects.">
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/thumbnail.jpg">
 
     <?php wp_head(); ?>
@@ -27,4 +27,5 @@
   <body>
     <header>
         <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
+        <?php wp_nav_menu(array('theme_location => header-menu')) ?>
     </header>
