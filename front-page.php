@@ -5,6 +5,7 @@
     <h1 class="title">Jacob.</h1>
     <h2>Graphic designer & Web developer</h2>
   </div>
+  <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow.svg" alt="arrow">
 </div>
 <div class="featured-title">
   <h3>Featured Projects</h3>

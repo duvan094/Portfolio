@@ -17,6 +17,29 @@ if(have_posts()){
   <div class="wrapper project">
     <?php
         echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
+
+        $terms = get_the_terms ($post->id, 'project_skill');
+        echo "<p class='skills'><b>Made in</b> ". get_the_date( 'Y', '', '') . " <b>with</b>";
+
+        $count = count($terms);
+        for($i = 0; $i < $count; $i++){
+          if($count > 1 && $i == $count-1){
+            echo " and";
+          }
+
+          echo " " . $terms[$i]->name;
+
+          if($i < $count-2){
+            echo ",";
+          }
+
+        }
+
+        echo ".</p>";
+
+
+
+
         the_content();
         echo "<div class='next-prev-post'>";
         next_post_link( '%link' );
