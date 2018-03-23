@@ -7,7 +7,7 @@ $args = array(
 $my_query = new WP_Query($args);
 
 if ($my_query->have_posts()):
-  echo '<ul id="postgrid">';
+  echo '<ul id="postgrid" class="postgrid-margin">';
   while ($my_query->have_posts()):
       $my_query->the_post();
           echo '<li>';

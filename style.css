@@ -21,7 +21,7 @@ Author: Jacob Duvander
   padding:0;
   margin:0;
   font-family: 'Montserrat', sans-serif;
-  color:#231D17;
+  color:#222326;
 }
 
 a{
@@ -36,10 +36,19 @@ h3{
 p, .p {
   font-size: 1.1em;
   line-height: 1.5em;
+  font-weight: 500;
 }
 
 p > a{
-  text-decoration: underline;
+  font-weight: 600;
+  color:#f1777a;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+p > a:hover{
+  color:#f1777a;
+  opacity: 0.8;
 }
 
 header{
@@ -48,7 +57,7 @@ header{
   top:0;
   height: 88px;
   display: block;
-  padding:44px;
+  padding:11px;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -79,7 +88,7 @@ header #logo>img{
 }*/
 
 .hero{
-  min-height: 320px;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +109,8 @@ header #logo>img{
 }
 
 .hero-container h1{
-  font-size: 2.5em;
+  font-weight: 600;
+  font-size: 2em;
   color:#FFF;
   position: absolute;
   z-index: 1;
@@ -112,14 +122,14 @@ header #logo>img{
 }
 
 .hero.front-page{
-  background: #231D17;
-  color: #F4E3BF;
+  background: linear-gradient(#f1777a, #f3a75c);
+  color: #FFF;
   position: relative;
   min-height: 520px;
 }
 
 .hero.front-page *{
-  color: #F4E3BF;
+  color: #fff;
 }
 
 .hero.front-page .title{
@@ -171,7 +181,7 @@ header #logo>img{
     bottom:0;
     padding:11px;
     cursor: pointer;
-    background: #000;
+    background: #222426;
     color:#FFF;
     outline: none;
     border:none;
@@ -240,19 +250,23 @@ article .text-container{
 
 .featured-title{
   padding:44px 11px;
-  background: #F4E3BF;
+  background: #fff;
 }
 
 .featured-title h3{
   text-align: center;
   margin-bottom:0;
-  font-size: 2em;
 }
 
 #postgrid{
   width:100%;
+  max-width: 1280px;
   padding:0;
-  margin:0;
+  margin:auto;
+}
+
+#postgrid.postgrid-margin{
+  margin:66px auto;
 }
 
 #postgrid li{
@@ -316,7 +330,7 @@ article .wrapper.project p{
   padding:11px;
 }
 
-article .wrapper.project p > a {
+article p > a {
   font-weight: 600;
 }
 
@@ -330,7 +344,8 @@ article .wrapper.project p > a {
 .next-prev-post a{
   display: block;
   padding:11px;
-  background:#000;
+  border-radius: 5px;
+  background:#222426;
   color:#FFF;
   box-sizing: border-box;
   text-align: center;
@@ -340,7 +355,21 @@ article .wrapper.project p > a {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  top:0;
+  transition: top 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.0);
+-moz-box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.0);
+box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.0);
 }
+
+
+.next-prev-post a:hover{
+  top:-3px;
+  -webkit-box-shadow: 0px 16px 52px -12px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 16px 52px -12px rgba(0,0,0,1);
+  box-shadow: 0px 16px 52px -12px rgba(0,0,0,1);
+}
+
 
 .next-prev-post a[rel~="next"]{
   float:left;
@@ -374,20 +403,29 @@ article .wrapper.project p > a {
   transform: translate(50%,30%);
 }
 
+.profile-img.article-img{
+  border-radius: 50%;
+  max-height: 300px;
+  max-width: 300px;
+  overflow: hidden;
+  -webkit-box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.43);
+  -moz-box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.43);
+  box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.43);
+}
 
 /*Footer*/
 footer{
-  background: #000;
+  background: #222426;
   padding: 44px 22px 22px 22px;
-  color: #F4E3BF;
+  color: #fff;
 }
 
 footer *{
-  color: #F4E3BF;
+  color: #fff;
 }
 
 footer a{
-  color: #F4E3BF;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -403,6 +441,10 @@ footer .footer-bottom{
   align-items: center;
 }
 
+
+footer .links{
+  position: relative;
+}
 
 footer .links>a{
   float:left;
@@ -420,6 +462,8 @@ footer .copyright{
 }
 
 @media(max-width:720px){
+
+
   footer *{
     text-align: center;
   }
@@ -442,12 +486,28 @@ footer .copyright{
 }
 
 @media(min-width:720px){
+
+  article .text-container{
+    margin-top: 0px;
+    margin-left: 44px;
+  }
+
+  h3{
+    font-size: 2.8em;
+    margin-bottom: 22px;
+  }
+
+  header{
+    padding:44px;
+  }
+
   article{
     margin:0 11px;
   }
 
   .hero-container h1{
-    font-size: 3.5em;
+    font-size: 3em;
+    font-weight: 600;
   }
 
   .slider-cont img{
@@ -488,6 +548,11 @@ footer .copyright{
 
   .next-prev-post{
     padding: 11px 0;
+  }
+
+  .next-prev-post a{
+    padding:22px;
+    max-width: 200px;
   }
 
   article .wrapper{
