@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="front-page hero">
+<div id="hero" class="front-page hero">
   <div class="hero-text">
     <h1 class="title">Jacob.</h1>
     <h2>Graphic designer & Web developer</h2>
@@ -52,4 +52,14 @@ endif;
     </div>
   </div>
 </article>
+
+<script type="text/javascript">
+
+  document.getElementById("arrow").addEventListener("click",function(){
+      console.log("Arrow click");
+      document.getElementById("hero").classList.toggle("minimize");
+  });
+
+</script>
+
 <?php get_footer(); ?>

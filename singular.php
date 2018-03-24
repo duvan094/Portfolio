@@ -61,10 +61,7 @@ if(have_posts()){
   var slider = document.getElementById("slider");
 
   var slides = slider.children;
-  var slideLength = slider.children.length
-  /*for(var i = 0; i < slides.length; i++){
-    slides[i].classList.toggle("focus");
-  }*/
+  var slideLength = slider.children.length;
 
   var currentSlide = 0;
   slides[currentSlide].classList.toggle("focus");
@@ -88,7 +85,6 @@ if(have_posts()){
       slides[currentSlide].classList.toggle("focus");
     }
   });
-
 
 </script>
 
