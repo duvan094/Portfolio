@@ -61,11 +61,10 @@ header{
   position: absolute;
   width: 100%;
   top:0;
-  height: 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:11px;
+  padding:22px;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -610,7 +609,6 @@ footer .copyright{
 
   header{
     padding:44px;
-    margin-top: 22px;
   }
 
   article{
