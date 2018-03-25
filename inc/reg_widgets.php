@@ -10,8 +10,8 @@
 //    'description'   => __( 'Show my skills and social links', 'portfolio_theme' ),
     'location'      => 'Single pages',
     /** HTML to wrap widget title in  */
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
+    'before_title'  => '<h1 class="h3">',
+    'after_title'   => '</h1>',
     /** HTML to wrap each widget  */
     'before_widget' => '<div class="text-container">',
     'after_widget'  => '</div>',
