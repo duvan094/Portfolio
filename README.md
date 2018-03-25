@@ -1,2 +1,2 @@
 # Portfolio
-This is a Wordpress theme for my portfolio <a href="www.jacobduvander.se">website</a>.
+This is a Wordpress theme for my portfolio [website](http://jacobduvander.se)
