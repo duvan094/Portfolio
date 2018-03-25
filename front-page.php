@@ -2,7 +2,7 @@
 
 <div id="hero" class="front-page hero">
   <div class="hero-text">
-    <h1 class="title">Jacob.</h1>
+    <div class="title">Jacob.</div>
     <h2>Graphic designer & Web developer</h2>
   </div>
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow.svg" alt="arrow">
@@ -39,17 +39,8 @@ endif;
 ?>
 <article>
   <div class="wrapper">
-    <figure class="article-img profile-img">
-      <img class="article-img" src="<?php bloginfo('template_url'); ?>/img/profile.jpg" alt="profile">
-    </figure>
-    <div class="text-container">
-      <h3>A little bit about me</h3>
-      <p>I'm a coffee enthusiastic student studying graphic design and web devolpment.
-        I'm born and raised in Sweden and currently live in Jönköping where I study at Jönköping University.
-        I'm focusing my time on studies but would never say no to work on projects which could help build my portfolio.
-        See all of my work <a href="/project/">here</a>.
-      </p>
-    </div>
+    <?php dynamic_sidebar('profile-img'); ?>
+    <?php dynamic_sidebar('about-me'); ?>
   </div>
 </article>
 

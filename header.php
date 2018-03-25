@@ -3,7 +3,9 @@
   <head>
     <title>Jacob Duvander | Portfolio</title>
     <meta charset="utf-8">
-    <meta name="description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out my latest projects.">
+    <meta name="author" content="Jacob Duvander">
+    <meta name="keywords" content="portfolio, jacob-duvander, grafic-designer, web-developer, grafisk-design, webbutvecklare, new-media-design">
+    <meta name="description" content="The portfolio website of graphic designer and web developer, Jacob Duvander. Currently studying New Media Design at Jönköping University. Check out my latest projects.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
@@ -19,7 +21,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="Jacob Duvander - Portfolio">
-    <meta property="og:description" content="The portfolio of graphic designer and web developer, Jacob Duvander. Check out my latest projects.">
+    <meta property="og:description" content="The portfolio website of graphic designer and web developer, Jacob Duvander. Currently studying New Media Design at Jönköping University. Check out my latest projects.">
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/thumbnail.jpg">
 
     <?php wp_head(); ?>

@@ -515,6 +515,11 @@ box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.0);
   box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.43);
 }
 
+.profile-img img{
+    width:100%;
+    height:auto;
+}
+
 /*Footer*/
 footer{
   background: #222426;

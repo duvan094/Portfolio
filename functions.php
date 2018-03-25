@@ -5,4 +5,5 @@
   require('inc/reg_hooks.php');
   require('inc/shortcodes.php');
   require('inc/reg_page_menu.php');
+  require('inc/reg_widgets.php');
  ?>
