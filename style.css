@@ -165,8 +165,13 @@ header #logo>img:hover{
   background: linear-gradient(#f1777a, #f3a75c);
   color: #FFF;
   position: relative;
-  min-height: 520px;
-  transition: min-height 0.5s ease-in-out;
+  height:calc(100vh - 100px);
+  max-height: 520px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.hero.front-page.archive{
+  max-height: 240px;
 }
 
 .hero.front-page *{
@@ -186,7 +191,7 @@ header #logo>img:hover{
 }
 
 #hero.minimize{
-  min-height: 250px;
+  max-height: 250px;
 }
 
 #hero.minimize .title{
@@ -537,6 +542,12 @@ footer *{
 footer a{
   color: #fff;
   font-weight: 600;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+footer a:hover{
+  opacity: 0.6;
 }
 
 footer h3{
