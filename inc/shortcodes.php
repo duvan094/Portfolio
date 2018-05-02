@@ -11,6 +11,7 @@
       $markup .= "<img src='" . wp_get_attachment_image_url($images[$i],$atts['size']) . "'>";
     }
     $markup .= "</div>";
+    $markup .= "<div id='slide-tracker'></div>";
     $markup .= "<button id='prev'>Previous</button><button id='next'>Next</button></div>";
     return $markup;
   }

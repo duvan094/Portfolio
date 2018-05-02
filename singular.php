@@ -58,34 +58,88 @@ if(have_posts()){
 
 <script type="text/javascript">
 
+  window.onresize = function(event) {
+      resizeSlider();
+  };
+
   var slider = document.getElementById("slider");
 
-  var slides = slider.children;
-  var slideLength = slider.children.length;
+  function resizeSlider(){
+      var sliderContainerWidth = document.querySelector(".slider-cont").offsetWidth;
+
+      for(var i = 0; i<slider.children.length; i++){
+        slider.children[i].style.width = sliderContainerWidth + "px";
+      }
+
+      slider.style.width = sliderContainerWidth*slider.children.length + "px";
+  }
+
+  resizeSlider();
 
   var currentSlide = 0;
-  slides[currentSlide].classList.toggle("focus");
+
+  var slideTracker = document.getElementById("slide-tracker");
+
+  for(var i = 0; i<slider.children.length; i++){
+    var btn = document.createElement("BUTTON");
+
+    (function(i) {
+      btn.addEventListener("click",function(event){
+        for(var x = 0; x < slideTracker.children.length; x++){
+          if(event.target != slideTracker.children[x]){
+            slideTracker.children[x].classList.remove("selected");
+          }
+        }
+
+        event.target.classList.add("selected");
+        var slide = i;
+        getSlide(slide);
+      });
+    }(i));
+
+    slideTracker.appendChild(btn);
+  }
+
+
+
+  function updateTracker(slide){
+    for(var i = 0; i < slideTracker.children.length; i++){
+      if(slideTracker.children[slide] != slideTracker.children[i]){
+        slideTracker.children[i].classList.remove("selected");
+      }
+    }
+
+    slideTracker.children[slide].classList.add("selected");
+  }
+
+  updateTracker(0);
 
   document.getElementById("next").addEventListener("click",function(){
-    if(slideLength > 1){
-      slides[currentSlide].classList.toggle("focus");
+    currentSlide++;
 
-      currentSlide = ++currentSlide%slideLength
-      slides[currentSlide].classList.toggle("focus");
+    if(currentSlide > slider.children.length-1){
+      currentSlide = 0;
     }
+
+    getSlide(currentSlide);
   });
 
   document.getElementById("prev").addEventListener("click",function(){
-    if(slideLength > 1){
-      slides[currentSlide%slideLength].classList.toggle("focus");
-      currentSlide -= 1;
-      if(currentSlide < 0){
-        currentSlide = slideLength-1;
-      }
-      slides[currentSlide].classList.toggle("focus");
+    currentSlide--;
+
+    if(currentSlide < 0){
+      currentSlide = slider.children.length-1;
     }
+
+    getSlide(currentSlide);
   });
 
+  function getSlide(slideIndex){
+    currentSlide = slideIndex;
+    slider.style.transform = "translate(" + ((currentSlide/slider.children.length) * -100) + "%,0)";
+    updateTracker(currentSlide);
+  }
+  
 </script>
 
 <?php get_footer(); ?>
