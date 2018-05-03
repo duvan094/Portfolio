@@ -119,8 +119,12 @@ header #logo>img:hover{
   transition: opacity 0.2s ease-in-out;
 }
 
+header.dark{
+  position: relative;
+}
+
 header.dark .menu li>a{
-  color:#000;
+  color:#222326;
 }
 
 .menu li>a:hover{
@@ -143,7 +147,7 @@ header.dark .menu li>a{
 }
 
 .header-fixed .menu li>a{
-  color:#000;
+  color:#222326;
   opacity: 1;
 }
 
@@ -490,17 +494,17 @@ box-shadow: -12px 10px 74px -12px rgba(0,0,0,0.0);
 
 /*Footer*/
 footer{
-  background: #222426;
+  background: #f2f2f2;
   padding: 44px 22px 22px 22px;
-  color: #fff;
+  color: #000;
 }
 
 footer *{
-  color: #fff;
+  color: #222326;
 }
 
 footer a{
-  color: #fff;
+  color: #222326;
   font-weight: 600;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
@@ -576,6 +580,10 @@ footer .copyright{
   h3,.h3{
     font-size: 2.8em;
     margin-bottom: 22px;
+  }
+
+  footer h3{
+    font-size: 1.5em;
   }
 
   header{

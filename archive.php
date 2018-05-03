@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
-<div class="hero-container">
-  <div class="hero front-page archive">
-  </div>
-  <?php echo "<h1 class='title'>" . "Archive" . "</h1>"; ?>
+<div class="featured-title">
+  <?php echo "<h3 class='title'>" . "Projects" . "</h3>"; ?>
 </div>
 
 

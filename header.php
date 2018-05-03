@@ -28,7 +28,7 @@
   </head>
   <body>
       <?php
-        if( is_singular() ) {
+        if( is_singular() || is_archive() ) {
           ?>
               <header class="dark">
                   <div class="header-wrapper">
