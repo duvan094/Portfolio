@@ -6,18 +6,12 @@ if(have_posts()){
     the_post();
 
 ?>
-<div class="hero-container">
-  <div class="hero project" style="background:url(<?php echo get_the_post_thumbnail_url($post->ID,'full')?>); background-size:cover; background-position:center;">
-  </div>
-  <?php echo "<h1>" . get_the_title() . "</h1>"; ?>
-</div>
-
 
 <article>
   <div class="wrapper project">
     <?php
         echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
-
+        echo "<h1>" . get_the_title() . "</h1>";
         $terms = get_the_terms ($post->id, 'project_skill');
         echo "<p class='skills'><b>Made in</b> ". get_the_date( 'Y', '', '') . " <b>with</b>";
 
@@ -139,7 +133,7 @@ if(have_posts()){
     slider.style.transform = "translate(" + ((currentSlide/slider.children.length) * -100) + "%,0)";
     updateTracker(currentSlide);
   }
-  
+
 </script>
 
 <?php get_footer(); ?>

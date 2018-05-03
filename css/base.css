@@ -55,12 +55,20 @@ header{
   position: absolute;
   width: 100%;
   top:0;
+  padding:0 22px;
+  height:88px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.header-wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:22px;
-  box-sizing: border-box;
-  z-index: 100;
+  width: 100%;
+  height:100%;
+  margin:auto;
+  max-width: 1280px;
 }
 
 .wrapper{
@@ -71,8 +79,8 @@ header{
 
 header #logo{
   display: block;
-  height:44px;
-  width: 44px;
+  height:32px;
+  width: 32px;
   float:left;
 }
 
@@ -92,18 +100,18 @@ header #logo>img:hover{
   overflow: hidden;
 }
 
-#menu-header-menu{
+.menu{
   list-style: none;
   overflow: hidden;
   float:right;
   margin-right: -22px;
 }
 
-#menu-header-menu li{
+.menu li{
   float:left;
 }
 
-#menu-header-menu li>a{
+.menu li>a{
   color:#FFF;
   font-weight: 600;
   margin:0 22px;
@@ -111,8 +119,40 @@ header #logo>img:hover{
   transition: opacity 0.2s ease-in-out;
 }
 
-#menu-header-menu li>a:hover{
+header.dark .menu li>a{
+  color:#000;
+}
+
+.menu li>a:hover{
   opacity: 0.8;
+}
+
+.header-fixed{
+  background:#FFF;
+  position:fixed;
+  padding:11px 22px;
+  box-shadow:0 0 0px 0px rgba(0,0,0,0.0);
+  height:66px;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.header-fixed.revealed{
+  transform: translateY(0);
+  box-shadow:0 0 10px 2px rgba(0,0,0,0.05);
+}
+
+.header-fixed .menu li>a{
+  color:#000;
+  opacity: 1;
+}
+
+.header-fixed .menu li>a:hover{
+  opacity: 0.5;
+}
+
+.header-fixed #logo>img:hover{
+    opacity: 0.5;
 }
 
 /*h1{
@@ -159,9 +199,8 @@ header #logo>img:hover{
   background: linear-gradient(#f1777a, #f3a75c);
   color: #FFF;
   position: relative;
-  height:calc(100vh - 100px);
-  max-height: 520px;
-  transition: max-height 0.5s ease-in-out;
+  height:80vh;
+  transition: height 0.5s ease-in-out;
 }
 
 .hero.front-page.archive{
@@ -185,7 +224,7 @@ header #logo>img:hover{
 }
 
 #hero.minimize{
-  max-height: 250px;
+  height: 40vh;
 }
 
 #hero.minimize .title{
@@ -338,8 +377,13 @@ article .text-container{
 
 
 article .wrapper.project h1{
-  font-size: 2.5em;
-  text-align: center;
+  font-size: 2em;
+  text-align: left;
+  display: block;
+  max-width: 720px;
+  width: 100%;
+  padding: 11px;
+  box-sizing: border-box;
 }
 
 article .wrapper.project p{
@@ -536,6 +580,10 @@ footer .copyright{
 
   header{
     padding:44px;
+  }
+
+  .header-fixed{
+    padding:22px 44px;
   }
 
   article{

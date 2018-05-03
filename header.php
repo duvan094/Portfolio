@@ -27,7 +27,51 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header>
-        <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
-        <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+      <?php
+        if( is_singular() ) {
+          ?>
+              <header class="dark">
+                  <div class="header-wrapper">
+                    <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-black.svg" alt="logo"></a>
+                    <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+                  </div>
+              </header>
+          <?php
+        } else {
+      ?>
+          <header>
+              <div class="header-wrapper">
+                <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
+                <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+              </div>
+          </header>
+      <?php
+        }
+      ?>
+
+    <header class="header-fixed">
+        <div class="header-wrapper">
+          <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo-black.svg" alt="logo"></a>
+          <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+        </div>
     </header>
+
+    <script type="text/javascript">
+      window.onscroll = function(){
+        checkPos();
+      };
+
+      var revealVar = 100;
+
+      var fixedHeader = document.querySelector(".header-fixed");
+
+      function checkPos(){
+        if(window.pageYOffset >= revealVar){
+          fixedHeader.classList.add("revealed");
+        }else{
+          fixedHeader.classList.remove("revealed");
+        }
+      }
+
+
+    </script>
