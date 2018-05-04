@@ -1,5 +1,5 @@
 /*
-Theme Name: Portfolio Theme
+Theme Name: Portfolio_Theme
 Version: 0.1
 Description: Custom Wordpress theme for my portfolio website.
 Author: Jacob Duvander
@@ -7,3 +7,4 @@ Author: Jacob Duvander
 
 @import url("css/base.css");
 @import url("css/slider.css");
+@import url("css/spinner.css");

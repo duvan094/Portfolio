@@ -1,0 +1,41 @@
+#spinner-container{
+  width:100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#spinner-container.loadingFinished{
+  height:0 !important;
+}
+
+
+.spinner{
+  border:solid #CCC 6px;
+  border-top:solid #222326 6px;
+  height:50px;
+  width:50px;
+  opacity:0;
+  top:0;
+  border-radius:50%;
+  animation:spin 0.5s linear infinite;
+  transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out;
+}
+
+.center{
+  position:absolute;
+  top:0%;
+  left:50%;
+  margin-top:-37.5px;
+  margin-left:-37.5px;
+}
+
+#spinner-container.loading .spinner{
+  opacity:1;
+  top:50%;
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg)
+  }
+}
