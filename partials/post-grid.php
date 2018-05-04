@@ -11,7 +11,7 @@
 </div>
 
 <?php
-  echo '<button id="loadMore" onclick="loadPosts()">Load More</button>';
+  echo '<button id="loadMore" class="button" onclick="loadPosts()">Load More</button>';
 ?>
 
 <script type="text/javascript">

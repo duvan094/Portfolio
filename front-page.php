@@ -37,10 +37,10 @@ if ($my_query->have_posts()):
 endif;
 
 ?>
-<article>
+<article class="about-me invisible">
   <div class="wrapper">
-    <?php dynamic_sidebar('profile-img'); ?>
     <?php dynamic_sidebar('about-me'); ?>
+    <?php dynamic_sidebar('profile-img'); ?>
   </div>
 </article>
 

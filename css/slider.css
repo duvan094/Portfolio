@@ -35,7 +35,15 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 }
+
+.slider-cont > button:hover{
+    opacity:0.8;
+}
+
+
 
 .slider-cont button#prev::before{
   content: "";

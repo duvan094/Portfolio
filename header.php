@@ -62,7 +62,7 @@
         checkPos();
       };
 
-      var revealVar = 100;
+      var revealVar = 66;
 
       var fixedHeader = document.querySelector(".header-fixed");
 
