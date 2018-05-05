@@ -1,7 +1,7 @@
 <footer>
   <div class="wrapper">
     <h3>Contact</h3>
-    <a class="p" href="mailto:jacobduvander@gmail.com">jacobduvander@gmail.com</a>
+    <a class="p" href="mailto:contact@jacobduvander.se">contact@jacobduvander.se</a>
     <div class="footer-bottom">
       <div class="copyright">
         2018 © Jacob Duvander
