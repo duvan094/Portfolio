@@ -10,17 +10,7 @@
 <article>
   <div class="wrapper">
     <?php
-    echo "test";
-    if(have_posts()){
-      echo "test2";
-      while(have_posts()){
-        echo "test3";
-        the_post();
-        the_post_thumbnail(single_large);
-        the_title();
-        the_content();
-      }
-    }
+    echo "404";
     ?>
   </div>
 </article>

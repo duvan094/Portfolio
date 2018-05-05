@@ -2,8 +2,11 @@
 
 <div id="hero" class="front-page hero">
   <div class="hero-text">
-    <div class="title">Jacob.</div>
-    <h2>Graphic designer & Web developer</h2>
+    <!--<div class="title">Jacob.</div>-->
+    <div id="hero-logo-container">
+      <img src="<?php bloginfo('template_url'); ?>/img/responsive.svg" alt="Responsive Logo">
+    </div>
+    <!--<h2>Graphic designer & Web developer</h2>-->
   </div>
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow.svg" alt="arrow">
 </div>
