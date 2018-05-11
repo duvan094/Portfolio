@@ -1,13 +1,20 @@
 <?php get_header(); ?>
 
 <div id="hero" class="front-page hero">
-  <div class="hero-text">
-    <!--<div class="title">Jacob.</div>-->
-    <div id="hero-logo-container">
-      <img src="<?php bloginfo('template_url'); ?>/img/responsive.svg" alt="Responsive Logo">
+    <div class="hero-center">
+      <div class="slider-container" id="hero-slider">
+        <section>
+          <h2>Web developer</h2>
+        </section>
+        <section>
+          <h2>Graphic designer</h2>
+        </section>
+        <section>
+          <img src="<?php bloginfo('template_url'); ?>/img/responsive.svg" alt="Responsive Logo">
+        </section>
+      </div>
     </div>
     <!--<h2>Graphic designer & Web developer</h2>-->
-  </div>
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow.svg" alt="arrow">
 </div>
 <div class="featured-title">
@@ -26,14 +33,15 @@ if ($my_query->have_posts()):
   while ($my_query->have_posts()):
       $my_query->the_post();
           echo '<li>';
+          echo '<div>';
           echo "<a href='" . esc_url(get_permalink()) . "'>";
           echo '<figure style="background:url(' . get_the_post_thumbnail_url($post->ID,'full') . '); background-size:cover; background-position:center;">';
           echo '</figure>';
           echo '<div class="text-container">';
           echo '<h4>' . get_the_title() . '</h4>';
-          echo '<p>' . get_the_excerpt() .'</p>';
           echo '</div>';
           echo "</a>";
+          echo '</div>';
           echo '</li>';
   endwhile;
   echo '</ul>';
@@ -55,5 +63,7 @@ endif;
   });
 
 </script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/slider.js"></script>
 
 <?php get_footer(); ?>
