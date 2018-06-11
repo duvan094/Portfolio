@@ -10,7 +10,9 @@ if(have_posts()){
 <article>
   <div class="wrapper project">
     <?php
+        echo "<div class='gallery-wrapper'>";
         echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
+        echo "</div>";
         echo "<h1>" . get_the_title() . "</h1>";
         $terms = get_the_terms ($post->id, 'project_skill');
         echo "<p class='skills'><b>Made in</b> ". get_the_date( 'Y', '', '') . " <b>with</b>";
@@ -149,6 +151,25 @@ if(have_posts()){
   document.getElementById("next").addEventListener("click",nextImg);
 
   document.getElementById("prev").addEventListener("click",previousImg);
+
+
+  var sliderContainer = document.querySelector(".slider-cont");
+
+  sliderContainer.addEventListener("click",function(event){
+    sliderContainer.classList.toggle("expand");
+  });
+
+  sliderContainer.children[1].addEventListener("click",function(event){
+    event.stopPropagation();
+  });
+
+  sliderContainer.children[2].addEventListener("click",function(event){
+    event.stopPropagation();
+  });
+
+  sliderContainer.children[3].addEventListener("click",function(event){
+    event.stopPropagation();
+  });
 
 </script>
 
