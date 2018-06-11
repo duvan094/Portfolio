@@ -138,13 +138,37 @@ header.dark .menu li>a{
   box-shadow:0 0 0px 0px rgba(0,0,0,0.0);
   height:66px;
   transform: translateY(-100%);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .header-fixed.revealed{
   transform: translateY(0);
   box-shadow:0 0 10px 2px rgba(0,0,0,0.05);
+  animation-name: revealMenu;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes revealMenu {
+  0% {
+    transform:translateY(-100%);
+  }
+
+  50% {
+    transform:translateY(0);
+  }
+
+  75% {
+    transform:translateY(-3px);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+}
+
+
+
 
 .header-fixed .menu li>a{
   color:#222326;
@@ -207,7 +231,7 @@ header.dark .menu li>a{
   background: linear-gradient(#374140, #2A2C2B);
   color: #FFF;
   position: relative;
-  height:100vh;
+  height:85vh;
   transition: height 0.5s ease-in-out;
 }
 
@@ -395,6 +419,7 @@ article .text-container a{
 .featured-title h3{
   text-align: center;
   margin-bottom:0;
+  font-size: 2em;
 }
 
 #postgrid{
@@ -682,13 +707,65 @@ footer .links{
 }
 
 footer .links>a{
-
+  position: relative;
+  height: 44px;
+  width: 44px;
 }
 
 footer .links>a>img{
   display: block;
-  width: 44px;
-  height:auto;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  animation-name: deScaleIcon;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  transform:scale(1,1);
+}
+
+
+@keyframes deScaleIcon {
+    0% {
+      transform:scale(1.2,1.2);
+    }
+
+    50% {
+      transform:scale(1,1);
+    }
+
+    75% {
+      transform:scale(1.1,1.1);
+    }
+
+    100% {
+      transform:scale(1,1);
+    }
+}
+
+
+footer .links>a:hover img{
+  animation-name: scaleIcon;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  transform:scale(1.2,1.2);
+}
+
+@keyframes scaleIcon {
+    0% {
+      transform:scale(1,1);
+    }
+
+    50% {
+      transform:scale(1.2,1.2);
+    }
+
+    75% {
+      transform:scale(1.1,1.1);
+    }
+
+    100% {
+      transform:scale(1.2,1.2);
+    }
 }
 
 footer .copyright{

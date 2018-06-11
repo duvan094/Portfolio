@@ -99,10 +99,17 @@ endif;
   var heroSlider = document.getElementById("hero-slider");
   var endScroll =  document.getElementById("scroll-finish");
   var hero =  document.getElementById("hero");
+
+
+  heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
+  heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
+
+
   window.addEventListener("scroll",function(){
     heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
     heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
   });
+
 
 
   var scrollSpeed = 0;
