@@ -30,7 +30,7 @@ h1,h2,h3,.h3,h4{
 
 h3,.h3{
   font-size: 2em;
-  margin-bottom: 22px;
+  margin-bottom: 0.5em;
 }
 
 p, .p {
@@ -79,8 +79,8 @@ header{
 
 header #logo{
   display: block;
-  height:32px;
-  width: 32px;
+  height:2em;
+  width: 2em;
   float:left;
 }
 
@@ -93,7 +93,7 @@ header #logo>img{
 }
 
 header #logo>img:hover{
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .menu-header-menu-container{
@@ -104,7 +104,7 @@ header #logo>img:hover{
   list-style: none;
   overflow: hidden;
   float:right;
-  margin-right: -22px;
+  margin-right: -2em;
 }
 
 .menu li{
@@ -114,7 +114,7 @@ header #logo>img:hover{
 .menu li>a{
   color:#FFF;
   font-weight: 600;
-  margin:0 22px 0 0;
+  margin:0 2em 0 0;
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
@@ -128,7 +128,7 @@ header.dark .menu li>a{
 }
 
 .menu li>a:hover{
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .header-fixed{
@@ -136,7 +136,7 @@ header.dark .menu li>a{
   position:fixed;
   padding:11px 22px;
   box-shadow:0 0 0px 0px rgba(0,0,0,0.0);
-  height:66px;
+  height:4em;
   transform: translateY(-100%);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
@@ -278,7 +278,7 @@ header.dark .menu li>a{
   display: block;
   width:30px;
   height:30px;
-  margin-bottom:44px;
+  margin-bottom:3em;
   bottom:0;
   left:50%;
   transform: translate(-50%,0);
@@ -320,11 +320,11 @@ article .wrapper{
   align-items: center;
   flex-direction: column;
   padding:0 22px;
-  margin: 66px auto;
+  margin: 4em auto;
 }
 
 article .wrapper.project{
-  padding:0px 0px 66px 0px;
+  padding:0px 0px 4em 0px;
   margin-top:0px;
   max-width:960px;
 }
@@ -340,14 +340,14 @@ article .article-img{
 article.about-me{
   background:#f2f2f2;
   margin:0;
-  margin-top:66px;
+  margin-top:4em;
   overflow:hidden;
 }
 
 article.about-me .wrapper{
   max-width: 960px;
   flex-direction: column-reverse;
-  padding:88px 0;
+  padding:6em 0;
   margin:0px auto;
   min-height: 420px;
 }
@@ -370,7 +370,7 @@ article.about-me.invisible .text-container{
 }
 
 article .text-container{
-  margin-top: 44px;
+  margin-top: 3em;
   max-width: 520px;
 }
 
@@ -383,7 +383,7 @@ article .text-container a{
     font-size: 1em;
     background: #222326;
     padding: 1em 2em;
-    margin-top:44px;
+    margin-top:3em;
     color: #fff;
     outline: none;
     border: none;
@@ -411,7 +411,7 @@ article .text-container a{
 
 
 .featured-title{
-  margin:44px 11px;
+  margin:3em 11px;
   background: #fff;
   text-align: center;
 }
@@ -523,7 +523,7 @@ article .wrapper.project h1{
 }
 
 article .wrapper.project p{
-  margin-bottom:44px;
+  margin-bottom:3em;
   text-align: left;
   max-width: 720px;
   padding:11px;
@@ -536,7 +536,7 @@ article p > a {
 }
 
 article .wrapper.project p.skills{
-  margin-bottom: 11px;
+  margin-bottom: 0.5em;
   font-size: 1em;
 }
 
@@ -624,7 +624,7 @@ article .wrapper.project p.skills{
 }
 
 .button{
-  margin:88px auto;
+  margin:6em auto;
   display: block;
   font-size: 1px;
   background: #222326;
@@ -647,7 +647,7 @@ article .wrapper.project p.skills{
 }
 
 #loadMore{
-  margin-top: 22px;
+  margin-top: 2em;
 }
 
   .button:hover{
@@ -666,7 +666,7 @@ article .wrapper.project p.skills{
 /*Footer*/
 footer{
   background: #f2f2f2;
-  padding: 44px 22px 22px 22px;
+  padding: 3em 22px 2em 22px;
   color: #000;
 }
 
@@ -687,11 +687,11 @@ footer a:hover{
 
 footer h3{
   font-weight: 600;
-  margin-bottom: 11px;
+  margin-bottom: 0.2em;
 }
 
 footer .footer-bottom{
-  margin-top: 88px;
+  margin-top: 4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -708,8 +708,8 @@ footer .links{
 
 footer .links>a{
   position: relative;
-  height: 44px;
-  width: 44px;
+  height: 3em;
+  width: 3em;
 }
 
 footer .links>a>img{
@@ -783,15 +783,10 @@ footer .copyright{
   }
 
   footer .links{
-    margin-bottom: 44px;
-    margin:0 11px 44px 11px;
+    margin-bottom: 2em;
+    margin:0 0.5em 3em 0.5em;
   }
 
-
-
-  footer .links>a>img{
-    width: 55px;
-  }
 }
 
 @media(min-width:720px){
@@ -802,7 +797,7 @@ footer .copyright{
 
   h3,.h3{
     font-size: 2.8em;
-    margin-bottom: 22px;
+    margin-bottom: 0.4em;
   }
 
   footer h3{
@@ -814,7 +809,7 @@ footer .copyright{
   }
 
   footer .links>a{
-    margin:0 11px;
+    margin:0 0.5em;
   }
 
   header{
@@ -836,7 +831,7 @@ footer .copyright{
 
   #postgrid{
     overflow: hidden;
-    margin-bottom:66px;
+    margin-bottom:4em;
   }
 
   #postgrid li{
@@ -869,6 +864,7 @@ footer .copyright{
   article.about-me .wrapper{
     flex-direction: row;
   }
+
 }
 
 
@@ -876,4 +872,9 @@ footer .copyright{
   #postgrid li{
     width:calc(100%/3);
   }
+
+  article.about-me .text-container{
+    padding:0 22px 0 0;
+  }
+
 }
