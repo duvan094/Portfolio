@@ -301,7 +301,7 @@ article .wrapper{
 
 article .wrapper.project{
   padding:0px 0px 66px 0px;
-  margin-top:44px;
+  margin-top:0px;
   max-width:960px;
 }
 
@@ -445,25 +445,27 @@ article .text-container a{
 #postgrid .text-container{
   position: absolute;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   text-align: center;
   top:0;
   left:0;
+  background:rgba(255,255,255,0.9);
 }
 
 #postgrid li:hover .text-container{
   opacity:1;
 }
-
+/*
 #postgrid li:hover figure{
   transform:scale(1.1,1.1);
   filter: saturate(1) brightness(60%) contrast(120%);
   -webkit-filter: saturate(1) brightness(60%) contrast(120%);
 }
-
+*/
 #postgrid li h4{
-  font-size: 3em;
-  color:#FFF;
+  font-size: 2em;
+  color:#222326;
+  font-weight:600;
   position: absolute;
   top:50%;
   left:50%;

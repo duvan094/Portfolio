@@ -96,6 +96,15 @@ endif;
     scrollAnimate();
   }
 
+  var heroSlider = document.getElementById("hero-slider");
+  var endScroll =  document.getElementById("scroll-finish");
+  var hero =  document.getElementById("hero");
+  window.addEventListener("scroll",function(){
+    heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
+    heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
+  });
+
+
   var scrollSpeed = 0;
   function scrollAnimate(){
     if(scrollPos < scrollFinish){

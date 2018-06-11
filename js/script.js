@@ -10,10 +10,6 @@ function elementReveald(){
 
     /*Check if invisible element is visible on screen*/
     if(invisibleArr[i].getBoundingClientRect().top < windowHeight - interval){
-
-      if(invisibleArr[i].classList.contains("stats-row")){//Animate stats if visible
-        animateStats();
-      }
       invisibleArr[i].classList.remove("invisible");//remove invisible class
     }
   }

@@ -4,7 +4,7 @@
     <a class="p" href="mailto:contact@jacobduvander.se">contact@jacobduvander.se</a>
     <div class="footer-bottom">
       <div class="copyright">
-        2018 © Jacob Duvander
+        © 2018 Jacob Duvander
       </div>
       <div class="links">
         <a target="_blank" href="https://github.com/duvan094"><img src="<?php bloginfo('template_url'); ?>/img/github-black.svg" alt="github"></a>

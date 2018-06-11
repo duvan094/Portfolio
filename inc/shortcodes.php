@@ -8,7 +8,9 @@
     $images = explode(",",$atts['ids']);
 
     for($i = 0; $i<count($images); $i++){
-      $markup .= "<img src='" . wp_get_attachment_image_url($images[$i],$atts['size']) . "'>";
+      $markup .= "<figure style='background:url(\"". wp_get_attachment_image_url($images[$i],$atts['size']) ."\"); background-position:center; background-size:contain; background-repeat:no-repeat;'>";
+      //$markup .= "<img src='" . wp_get_attachment_image_url($images[$i],$atts['size']) . "'>";
+      $markup .= "</figure>";
     }
     $markup .= "</div>";
     $markup .= "<div id='slide-tracker'></div>";
