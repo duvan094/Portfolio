@@ -155,6 +155,7 @@ if(have_posts()){
 
   var sliderContainer = document.querySelector(".slider-cont");
 
+
   sliderContainer.addEventListener("click",function(event){
     sliderContainer.classList.toggle("expand");
   });

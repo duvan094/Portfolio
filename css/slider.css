@@ -7,13 +7,55 @@
 
 .slider-cont{
   position: relative;
+  transition: 0.3s ease-in-out height,0.3s ease-in-out width;
   width:100%;
   height:80vh;
-  overflow: hidden;
-  background:rgba(0,0,0,0);
-  transition: height 0.2s ease-in-out, background 0.2s ease-in-out;
-  animation: 0.5s ease-out 0s 1 loadAnimation;
   cursor: zoom-in;
+}
+
+.slider-cont::before{
+  content: "";
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background: rgba(0,0,0,0.0);
+  animation: 0.4s ease-in-out minimizeAnimationBg;
+}
+
+
+@keyframes minimizeAnimationBg {
+  0%{
+    visibility: visible;
+    background:rgba(0,0,0,0.9);
+  }
+
+  99%{
+    background:rgba(0,0,0,0.0);
+  }
+
+  100%{
+    visibility: hidden;
+  }
+}
+
+.slider-cont.expand::before{
+  visibility: visible;
+  background: rgba(0,0,0,0.9);
+  animation: 0.3s ease-in-out expandAnimation;
+}
+
+@keyframes expandAnimation {
+  0%{
+    background:rgba(0,0,0,0);
+  }
+
+  100%{
+    background:rgba(0,0,0,0.9);
+  }
 }
 
 .slider-cont.expand{
@@ -24,8 +66,13 @@
   left:0;
   z-index: 100;
   cursor: zoom-out;
-  background: rgba(0,0,0,0.9);
 }
+
+.slider-cont.expand figure{
+  height:100vh;
+
+}
+
 
 @media (min-width:720px) {
   .slider-cont{
@@ -49,7 +96,7 @@
   top:0;
   left:0;
   opacity: 1;
-  transition: 0.3s ease-in-out opacity;
+  transition: 0.3s ease-in-out opacity, 0.3s ease-in-out height;
 }
 
 .slider-cont.expand figure{
@@ -96,7 +143,7 @@
     overflow: hidden;
     white-space: nowrap;
     opacity: 1;
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .slider-cont > button:hover{
@@ -138,6 +185,7 @@
   transform:translate(-50%,0);
   display: flex;
   padding-bottom:5px;
+  transition: 0.3s ease-in-out all;
 }
 
 #slide-tracker button{
