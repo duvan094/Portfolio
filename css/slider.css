@@ -70,7 +70,6 @@
 
 .slider-cont.expand figure{
   height:100vh;
-
 }
 
 
@@ -184,7 +183,7 @@
   left:50%;
   transform:translate(-50%,0);
   display: flex;
-  padding-bottom:5px;
+  padding-bottom:0.8em;
   transition: 0.3s ease-in-out all;
 }
 

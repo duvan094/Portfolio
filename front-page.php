@@ -93,6 +93,17 @@ endif;
   function scroll(id){
     scrollFinish = document.getElementById(id).getBoundingClientRect().top - 110 + window.scrollY;
     scrollPos = window.scrollY;
+
+    if(document.querySelector(".mobile-menu").classList.contains("revealed")){
+      for(let i = 0; i<hamburgerBtns.length; i++){
+        hamburgerBtns[i].classList.toggle("revealed");
+      }
+      document.querySelector(".mobile-menu").classList.remove("revealed");
+      document.querySelector(".mobile-menu").classList.add("hidden");
+
+
+    }
+
     scrollAnimate();
   }
 
