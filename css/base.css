@@ -415,6 +415,15 @@ header.dark .menu li>a{
   width: 100%;
 }
 
+.hero .wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(1%);
+  display: block;
+  left: 0;
+}
+
 #hero-logo-container{
     display: block;
     width:100%;
@@ -454,7 +463,7 @@ header.dark .menu li>a{
   display: block;
   width:30px;
   height:30px;
-  margin-bottom:3em;
+  margin-bottom:4em;
   bottom:0;
   left:50%;
   transform: translate(-50%,0);
@@ -590,6 +599,10 @@ article .text-container a{
   margin:3em 11px;
   background: #fff;
   text-align: center;
+}
+
+.featured-title.front-page{
+  margin:1.5em 11px 3em 11px;
 }
 
 .featured-title h3{

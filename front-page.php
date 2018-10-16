@@ -15,9 +15,10 @@
       </div>
     </div>
     <!--<h2>Graphic designer & Web developer</h2>-->
+  <img class="wave" src="<?php bloginfo('template_url'); ?>/img/wave.svg">
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow-white.svg" alt="arrow">
 </div>
-<div class="featured-title" id="scroll-finish">
+<div class="featured-title front-page" id="scroll-finish">
   <h3>Latest Projects</h3>
 </div>
 <?php
