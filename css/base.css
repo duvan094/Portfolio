@@ -464,7 +464,7 @@ header.dark .menu li>a{
   display: block;
   width:30px;
   height:30px;
-  margin-bottom:4em;
+  margin-bottom:5em;
   bottom:0;
   left:50%;
   transform: translate(-50%,0);
@@ -550,6 +550,11 @@ article.about-me.invisible figure{
   opacity:0;
 }
 
+#postgrid li.invisible{
+  transform:translateY(50px);
+  opacity:0;
+}
+
 article.about-me.invisible .text-container{
   transform:translateX(-50px);
   opacity:0;
@@ -602,9 +607,6 @@ article .text-container a{
   text-align: center;
 }
 
-.featured-title.front-page{
-  margin:1.5em 11px 3em 11px;
-}
 
 .featured-title h3{
   text-align: center;
@@ -626,7 +628,16 @@ article .text-container a{
   padding:0px 22px 22px 22px;
   box-sizing: border-box;
   list-style: none;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s transform ease-in-out, 0.3s opacity ease-in-out;
 }
+
+#postgrid li.invisible{
+  transform:translateY(-30px);
+  opacity:0;
+}
+
 
 #postgrid li div{
   overflow: hidden;
@@ -1072,6 +1083,10 @@ footer .copyright{
   #postgrid li{
     width:calc(100%/2);
   }
+  
+  #postgrid li:nth-child(2n+1){
+    transition-delay: 0.1s;
+  }
 
   #postgrid li{
     padding:0px;
@@ -1106,6 +1121,12 @@ footer .copyright{
 @media(min-width:960px){
   #postgrid li{
     width:calc(100%/3);
+  }
+  #postgrid li:nth-child(3n+1){
+    transition-delay: 0.1s;
+  }
+  #postgrid li:nth-child(3n+2){
+    transition-delay: 0.2s;
   }
 
   article.about-me .text-container{

@@ -15,6 +15,8 @@
 ?>
 
 <script type="text/javascript">
+  var invisibleArr = [];
+
   var postgrid = document.getElementById("postgrid");
   var spinnerHeight = postgrid.children[0].offsetWidth;
   var spinner = document.getElementById("spinner-container");
@@ -41,10 +43,25 @@
         if(xmlhttp.responseText == ""){
           document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
         }else{
-          postgrid.innerHTML += xmlhttp.responseText;
+          var tempElt = document.createElement('div');
+          tempElt.innerHTML = xmlhttp.responseText;
+
+          while(tempElt.firstChild) {
+              postgrid.appendChild(tempElt.firstChild);
+          }
+
+          var tempArr = document.querySelectorAll(".invisible");
+          for (var i=0; i < tempArr.length; i++) {
+            invisibleArr.push(tempArr[i]);
+          }
+
         }
         spinner.classList.add("loadingFinished");
         spinner.classList.remove("loading");
+
+        if(invisibleArr.length % 6 !== 0){
+          document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
+        }
       }
     }
 

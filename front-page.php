@@ -33,7 +33,7 @@ if ($my_query->have_posts()):
   echo '<ul id="postgrid">';
   while ($my_query->have_posts()):
       $my_query->the_post();
-          echo '<li>';
+          echo '<li class="invisible">';
           echo '<div>';
           echo "<a href='" . esc_url(get_permalink()) . "'>";
           echo '<figure style="background:url(' . get_the_post_thumbnail_url($post->ID,'full') . '); background-size:cover; background-position:center;">';
@@ -92,7 +92,7 @@ endif;
   }
 
   function scroll(id){
-    scrollFinish = document.getElementById(id).getBoundingClientRect().top - 110 + window.scrollY;
+    scrollFinish = document.getElementById(id).getBoundingClientRect().top - 120 + window.scrollY;
     scrollPos = window.scrollY;
 
     if(document.querySelector(".mobile-menu").classList.contains("revealed")){
@@ -111,17 +111,6 @@ endif;
   var heroSlider = document.getElementById("hero-slider");
   var endScroll =  document.getElementById("scroll-finish");
   var hero =  document.getElementById("hero");
-
-/*
-  heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
-  heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
-
-
-  window.addEventListener("scroll",function(){
-    heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
-    heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
-  });
-*/
 
   var scrollSpeed = 0;
   function scrollAnimate(){
