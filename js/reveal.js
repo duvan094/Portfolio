@@ -14,7 +14,7 @@ function elementReveald(){
     /*Check if invisible element is visible on screen*/
     if(invisibleArr[i].getBoundingClientRect().top < windowHeight - interval){
       invisibleArr[i].classList.remove("invisible");//remove invisible class
-    }else{
+    }else if(invisibleArr[i].getBoundingClientRect().top > windowHeight - interval/2){
       invisibleArr[i].classList.add("invisible");//remove invisible class
     }
   }
