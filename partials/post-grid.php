@@ -32,7 +32,7 @@
     spinner.classList.remove("loadingFinished");
     spinner.classList.add("loading");
 
-    pageNumber += 3;
+    pageNumber += 6;
     var xmlhttp;
     xmlhttp=new XMLHttpRequest();
 

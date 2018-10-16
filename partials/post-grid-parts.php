@@ -3,7 +3,7 @@ $pageNumber = (isset($pageNumber) ? $pageNumber : 0);
 
 $args = array(
     'post_type'     => 'project',
-    'posts_per_page' => 3,
+    'posts_per_page' => 6,
     'offset' => $pageNumber
 );
 
