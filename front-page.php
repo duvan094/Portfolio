@@ -2,7 +2,7 @@
 
 <div id="hero" class="front-page hero">
     <div class="hero-center">
-      <div class="slider-container" id="hero-slider">
+      <div class="slider-container parallax" id="hero-slider" data-depth="0.5">
         <section>
           <h2>Web developer</h2>
         </section>
@@ -112,7 +112,7 @@ endif;
   var endScroll =  document.getElementById("scroll-finish");
   var hero =  document.getElementById("hero");
 
-
+/*
   heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
   heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
 
@@ -121,6 +121,40 @@ endif;
     heroSlider.style.height = endScroll.getBoundingClientRect().top + "px";
     heroSlider.style.opacity = Math.round((heroSlider.offsetHeight / hero.offsetHeight)*100)/100;
   });
+*/
+
+var parallaxWaves = document.querySelectorAll(".hero .parallax");
+
+window.addEventListener("scroll",changeParallax);
+
+var initialValue = 0;
+
+var minimizedScale = "scale(1,1)";
+var expandedScale = "scale(1.4,1.4)";
+var expanded = false;
+
+
+function changeParallax(){
+  var windowOffset = window.pageYOffset;
+  for(var i = 0; i < parallaxWaves.length; i++){
+
+    var depth = parallaxWaves[i].getAttribute("data-depth");
+    var movement = (((windowOffset) * depth) + initialValue);
+    var translate3d = " translate3d(0,"+ movement +"px,0)";
+
+    parallaxWaves[i].style['-webkit-transform'] = translate3d;
+    parallaxWaves[i].style['-moz-transform'] = translate3d;
+    parallaxWaves[i].style['-ms-transform'] = translate3d;
+    parallaxWaves[i].style['-o-transform'] = translate3d;
+    parallaxWaves[i].style.transform = translate3d;
+  }
+
+}
+
+
+
+
+
 
 
 
