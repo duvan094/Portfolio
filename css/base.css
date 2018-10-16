@@ -366,6 +366,7 @@ header.dark .menu li>a{
 }*/
 
 .hero{
+  overflow:hidden;
   min-height: 240px;
   display: flex;
   justify-content: center;
