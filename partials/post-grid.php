@@ -10,10 +10,6 @@
   <div class="spinner center"></div>
 </div>
 
-<?php
-//  echo '<button id="loadMore" class="button" onclick="loadPosts()">Load More</button>';
-?>
-
 <script type="text/javascript">
 
 
@@ -63,9 +59,8 @@
         spinner.classList.remove("loading");
 
         if(invisibleArr.length % 6 == 0){
-//          document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
             loading = false;
-          }
+        }
       }
     }
 
