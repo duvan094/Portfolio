@@ -13,6 +13,9 @@ if(have_posts()){
         echo "<div class='gallery-wrapper'>";
         echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
         echo "</div>";
+        if(get_the_terms($post->id, 'project_type' )){
+          echo "<p class='type'>" . get_the_terms($post->id, 'project_type' )[0]->name . "</p>";
+        }
         echo "<h1>" . get_the_title() . "</h1>";
         $terms = get_the_terms ($post->id, 'project_skill');
         echo "<p class='skills'><b>Made in</b> ". get_the_date( 'Y', '', '') . " <b>with</b>";

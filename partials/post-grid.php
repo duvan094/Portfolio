@@ -11,11 +11,14 @@
 </div>
 
 <?php
-  echo '<button id="loadMore" class="button" onclick="loadPosts()">Load More</button>';
+//  echo '<button id="loadMore" class="button" onclick="loadPosts()">Load More</button>';
 ?>
 
 <script type="text/javascript">
+
+
   var invisibleArr = [];
+  var loading = false;
 
   var postgrid = document.getElementById("postgrid");
   var spinnerHeight = postgrid.children[0].offsetWidth;
@@ -41,7 +44,7 @@
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200){
         if(xmlhttp.responseText == ""){
-          document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
+        //  document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
         }else{
           var tempElt = document.createElement('div');
           tempElt.innerHTML = xmlhttp.responseText;
@@ -59,9 +62,10 @@
         spinner.classList.add("loadingFinished");
         spinner.classList.remove("loading");
 
-        if(invisibleArr.length % 6 !== 0){
-          document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
-        }
+        if(invisibleArr.length % 6 == 0){
+//          document.getElementById("loadMore").parentNode.removeChild(document.getElementById("loadMore"));
+            loading = false;
+          }
       }
     }
 
@@ -69,6 +73,17 @@
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xmlhttp.send("pageNumber=" + encodeURIComponent(pageNumber));
   }
+
+
+    window.addEventListener("scroll",function(){
+      if(!loading){
+        var loadPos = postgrid.getBoundingClientRect().top + postgrid.offsetHeight;
+        if(window.innerHeight > loadPos){
+          loading = true;
+          loadPosts();
+        }
+      }
+    });
 
 
 </script>

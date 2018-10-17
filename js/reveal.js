@@ -7,11 +7,18 @@ for(var i = nodes.length; i--; invisibleArr.unshift(nodes[i]));
 function elementReveald(){
 
   var windowHeight = window.innerHeight;
-  var interval = 350;//Change interval to change detection ratio
+  var intervalDefault = 350;//Change interval to change detection ratio
 
   for(var i = 0; i < invisibleArr.length; i++){
 
     /*Check if invisible element is visible on screen*/
+
+    if(invisibleArr[i].getAttribute("data-interval")){
+      interval = invisibleArr[i].getAttribute("data-interval");
+    }else{
+      interval = intervalDefault;
+    }
+console.log(interval);
     if(invisibleArr[i].getBoundingClientRect().top < windowHeight - interval){
       invisibleArr[i].classList.remove("invisible");//remove invisible class
     }else if(invisibleArr[i].getBoundingClientRect().top > windowHeight - interval/2){
