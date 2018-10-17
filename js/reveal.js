@@ -18,7 +18,7 @@ function elementReveald(){
     }else{
       interval = intervalDefault;
     }
-console.log(interval);
+    
     if(invisibleArr[i].getBoundingClientRect().top < windowHeight - interval){
       invisibleArr[i].classList.remove("invisible");//remove invisible class
     }else if(invisibleArr[i].getBoundingClientRect().top > windowHeight - interval/2){
