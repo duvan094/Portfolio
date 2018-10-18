@@ -2,7 +2,7 @@
 
 <div id="hero" class="front-page hero">
     <div class="hero-center">
-      <div class="slider-container parallax" id="hero-slider" data-depth="0.5">
+      <div class="slider-container parallax" id="hero-slider" data-depth="0.45">
         <section>
           <h2>Web developer</h2>
         </section>
@@ -15,7 +15,6 @@
       </div>
     </div>
     <!--<h2>Graphic designer & Web developer</h2>-->
-  <img class="wave" src="<?php bloginfo('template_url'); ?>/img/wave.svg">
   <img id="arrow" src="<?php bloginfo('template_url'); ?>/img/arrow-white.svg" alt="arrow">
 </div>
 <div class="featured-title front-page" id="scroll-finish">

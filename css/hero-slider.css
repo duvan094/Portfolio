@@ -30,6 +30,7 @@
 .slider-container section h2{
   font-size: 2em;
   font-weight: 400;
+  transform: translateY(50%);
 }
 
 .slider-container section img{
