@@ -14,7 +14,8 @@
     }
     $markup .= "</div>";
     $markup .= "<div id='slide-tracker'></div>";
-    $markup .= "<button id='prev'>Previous</button><button id='next'>Next</button></div>";
+    $markup .= "<div class='img-button' id='prev'><img src='" . get_bloginfo('template_url') ."/img/arrow-left.svg'></div>";
+    $markup .= "<div class='img-button' id='next'><img src='" . get_bloginfo('template_url') ."/img/arrow-right.svg'></div></div>";
     return $markup;
   }
 

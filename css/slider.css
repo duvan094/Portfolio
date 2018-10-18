@@ -30,7 +30,7 @@
 @keyframes minimizeAnimationBg {
   0%{
     visibility: visible;
-    background:rgba(0,0,0,0.9);
+    background:rgba(255,255,255,0.8);
   }
 
   99%{
@@ -44,7 +44,7 @@
 
 .slider-cont.expand::before{
   visibility: visible;
-  background: rgba(0,0,0,0.9);
+  background: rgba(255,255,255,0.8);
   animation: 0.3s ease-in-out expandAnimation;
 }
 
@@ -54,7 +54,7 @@
   }
 
   100%{
-    background:rgba(0,0,0,0.9);
+    background: rgba(255,255,255,0.8);
   }
 }
 
@@ -125,55 +125,43 @@
   border:none;
 }
 
-.slider-cont > button{
+.slider-cont > .img-button{
     position: absolute;
     z-index: 10;
     bottom:0;
     padding:1em;
     cursor: pointer;
-    background: #222426;
-    color:#FFF;
-    outline: none;
     border:none;
-    text-align: center;
-    width:7.5em;
-    font-size: 0.9em;
-    text-overflow: ellipsis;
+    width:3.5em;
     overflow: hidden;
-    white-space: nowrap;
     opacity: 1;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-.slider-cont > button:hover{
+@media(min-width:720px){
+
+  .slider-cont > .img-button{
+      bottom:50%;
+      transform:translateY(50%);
+      opacity:0.1;
+  }
+
+  .slider-cont:hover > .img-button{
+    opacity:1;
+  }
+
+}
+
+.slider-cont > .img-button > img{
+  width:100%;
+  height:auto;
+}
+
+.slider-cont > .img-button:hover{
     opacity:0.8;
 }
 
-
-
-.slider-cont button#prev::before{
-  content: "";
-  display: block;
-  width:0;
-  height:0;
-  border: solid 0.5em transparent;
-  border-right-color: #fff;
-  float:left;
-  transform: translate(-50%,15%);
-}
-
-.slider-cont button#next::before{
-  content: "";
-  display: block;
-  width:0;
-  height:0;
-  border: solid 0.5em transparent;
-  border-left-color: #fff;
-  float:right;
-  transform: translate(50%,15%);
-}
-
-.slider-cont button#next{
+.slider-cont .img-button#next{
   right:0;
 }
 
