@@ -29,7 +29,7 @@
   </head>
   <body>
       <?php
-        if( is_singular() || is_archive() ) {
+        if( !is_front_page() ) {
           ?>
               <header class="dark">
                   <div class="header-wrapper">

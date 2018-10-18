@@ -142,7 +142,7 @@ header.dark .menu li>a{
 
 .header-fixed.revealed{
   transform: translateY(0);
-  box-shadow:0 0 10px 2px rgba(0,0,0,0.05);
+  box-shadow:0 0 10px 2px rgba(0,0,0,0.1);
   animation-name: revealMenu;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
@@ -451,11 +451,6 @@ header.dark .menu li>a{
   transition: font-size 0.5s ease-in-out;
 }
 
-.hero.front-page h2{
-  font-size: 2em;
-  font-weight: 400;
-  transition: font-size 0.5s ease-in-out;
-}
 
 #arrow{
   position: absolute;
