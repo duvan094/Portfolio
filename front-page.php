@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<div id="hero" class="front-page hero" style="background:url( <?php the_post_thumbnail_url($post->ID,'full') ?> ); background-size:cover; background-position:top;">
+<div id="hero" class="front-page hero">
+    <div class="background parallax" style="background:url( <?php the_post_thumbnail_url($post->ID,'full') ?> ); background-size:cover; background-position:top;" data-depth="0.2">
+    </div>
     <div class="hero-center">
       <div class="slider-container parallax" id="hero-slider" data-depth="0.45">
         <section>
