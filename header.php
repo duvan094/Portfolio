@@ -29,8 +29,9 @@
   </head>
   <body>
       <?php
-        if( !is_front_page() ) {
+      //  if( !is_front_page() ) {
           ?>
+
               <header class="dark">
                   <div class="header-wrapper">
                     <a id="logo" href="<?php echo home_url(); ?>">
@@ -51,22 +52,27 @@
                     <?php wp_nav_menu(array('theme_location => header-menu')) ?>
                   </div>
               </header>
+
           <?php
-        } else {
+    //    } else {
       ?>
-          <header>
+
+<!--
+          <header class="dark">
               <div class="header-wrapper">
-                <a id="logo" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
+                <a id="logo" href="<?php //echo home_url(); ?>"><img src="<?php// bloginfo('template_url'); ?>/img/logo.svg" alt="logo"></a>
                 <button class="hamburgerBtn">
                   <span></span>
                   <span></span>
                   <span></span>
                 </button>
-                <?php wp_nav_menu(array('theme_location => header-menu')) ?>
+                <?php// wp_nav_menu(array('theme_location => header-menu')) ?>
               </div>
           </header>
+
+        -->
       <?php
-        }
+    //    }
       ?>
 
     <header class="header-fixed">

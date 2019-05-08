@@ -7,12 +7,16 @@
       <div class="copyright">
         © <?php echo date("Y"); ?> Jacob Duvander
       </div>
-      <div class="links">
-        <a target="_blank" href="https://github.com/duvan094"><img src="<?php bloginfo('template_url'); ?>/img/github-black.svg" alt="github"></a>
-        <a target="_blank" href="https://codepen.io/duvander/"><img src="<?php bloginfo('template_url'); ?>/img/codepen-black.svg" alt="codepen"></a>
-        <a target="_blank" href="https://www.behance.net/duvander1409"><img src="<?php bloginfo('template_url'); ?>/img/behance-black.svg" alt="behance"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/jacobduvander/"><img src="<?php bloginfo('template_url'); ?>/img/linkedin-black.svg" alt="linkedin"></a>
+      <div class="followCont">
+        <div class="title">Follow me.</div>
+        <div class="links">
+          <a target="_blank" href="https://github.com/duvan094"><img src="<?php bloginfo('template_url'); ?>/img/github-black.svg" alt="github"></a>
+          <a target="_blank" href="https://codepen.io/duvander/"><img src="<?php bloginfo('template_url'); ?>/img/codepen-black.svg" alt="codepen"></a>
+          <a target="_blank" href="https://www.behance.net/duvander1409"><img src="<?php bloginfo('template_url'); ?>/img/behance-black.svg" alt="behance"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/jacobduvander/"><img src="<?php bloginfo('template_url'); ?>/img/linkedin-black.svg" alt="linkedin"></a>
+        </div>
       </div>
+
     </div>
   </div>
 </footer>

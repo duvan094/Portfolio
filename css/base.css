@@ -449,6 +449,11 @@ header.dark .menu li>a{
   font-size: 4em;
   font-weight: 700;
   transition: font-size 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
 }
 
 .hero .background{
@@ -617,6 +622,11 @@ article .text-container a{
   text-align: center;
   margin-bottom:0;
   font-size: 2em;
+}
+
+.video-wrapper{
+  width:100%;
+  margin-bottom:2em;
 }
 
 #postgrid{
@@ -953,6 +963,16 @@ footer .footer-bottom{
   align-items: center;
 }
 
+footer .footer-bottom .title{
+  font-weight: 600;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+footer .followCont{
+  width: 100%;
+  max-width: 420px;
+}
 
 footer .links{
   position: relative;
@@ -1061,12 +1081,21 @@ footer .copyright{
     font-size: 1.5em;
   }
 
-  footer .links{
+  footer .links, footer .followCont{
     width:inherit;
   }
 
   footer .links>a{
     margin:0 0.5em;
+  }
+
+  footer .footer-bottom{
+    align-items: flex-end;
+    margin-top: 3em;
+  }
+
+  footer .footer-bottom .title{
+    margin-left: 0.5em;
   }
 
   header{

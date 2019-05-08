@@ -10,9 +10,16 @@ if(have_posts()){
 <article>
   <div class="wrapper project">
     <?php
-        echo "<div class='gallery-wrapper'>";
-        echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
-        echo "</div>";
+        if(get_post_meta($post->ID,"project_gallery",true)){
+          echo "<div class='gallery-wrapper'>";
+          echo do_shortcode(get_post_meta($post->ID,"project_gallery",true));
+          echo "</div>";
+        }else if(get_post_meta($post->ID,"project_video",true)){
+          echo "<div class='video-wrapper'>";
+          echo do_shortcode(get_post_meta($post->ID,"project_video",true));
+          echo "</div>";
+        }
+
         if(get_the_terms($post->id, 'project_type' )){
           echo "<p class='type'>" . get_the_terms($post->id, 'project_type' )[0]->name . "</p>";
         }
